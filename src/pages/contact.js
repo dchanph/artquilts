@@ -5,7 +5,7 @@ const ContactPage = () => {
 	return (
 		<Layout>
 			<h1>Contact</h1>
-			<h2>Tel number: 123455678 Email: abc@joe.com</h2>
+			<h2>Phone me at 123455678 or email me at abc@joe.com</h2>
 		</Layout>
 	);
 };

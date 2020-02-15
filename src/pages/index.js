@@ -6,10 +6,13 @@ import '../styles/index.scss';
 const IndexPage = () => {
 	return (
 		<Layout>
-			<h1>Hello.</h1>
-			<h2>I'm Doreen. Quilting is my passion. Quilting runs in my family.</h2>
+			<h1>Hello:)</h1>
+			<h2>
+				I'm Gen. Welcome to Art Quilts! Hand crafting designs based on your
+				wish. Using recycled resources to gift an art.
+			</h2>
 			<p>
-				Need a quilter? <Link to='/contact'>Contact me here.</Link>
+				Order a product? <Link to='/contact'>Contact me here.</Link>
 			</p>
 		</Layout>
 	);

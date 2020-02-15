@@ -5,9 +5,9 @@
  */
 
 module.exports = {
-  siteMetadata: {
-    title: "ART Quilt a Dream!",
-    author: "Doreen Chan",
-  },
-  plugins: ["gatsby-plugin-sass"],
-}
+	siteMetadata: {
+		title: 'ART Quilt',
+		author: 'Doreen Chan'
+	},
+	plugins: ['gatsby-plugin-sass']
+};
