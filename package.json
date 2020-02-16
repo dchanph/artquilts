@@ -14,8 +14,9 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "bulma": "^0.8.0",
     "gatsby": "^2.18.12",
-    "gatsby-plugin-sass": "^2.1.27",
+    "gatsby-plugin-sass": "^2.1.28",
     "gatsby-source-filesystem": "^2.1.48",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",

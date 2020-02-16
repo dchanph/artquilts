@@ -17,7 +17,64 @@ const CraftsPage = () => {
 	}, []);
 	return (
 		<Layout>
-			<h1>My Portfolio</h1>
+			{/* <h1>My Portfolio</h1>
+			<section class='hero is-primary bold'>
+				<div class='hero-body'>
+					<div class='container'>
+						<p class='title is-5'>Our Crafts</p>
+						<p class='subtitle is-6'>
+							Every quilt is built on a wish. All hand crafted using someone's
+							pre-loved fabrics.
+						</p>
+						<Link to='/donate'> Donate a Kit</Link>
+					</div>
+				</div>
+				<br />
+			</section>
+			<br /> */}
+
+			<div class='tile is-ancestor'>
+				<div class='tile is-vertical is-8'>
+					<div class='tile'>
+						<div class='tile is-parent is-vertical'>
+							<article class='tile is-child notification is-primary bold'>
+								<p class='title'>Vertical...</p>
+								<p class='subtitle'>Top tile</p>
+								<figure class='image is-4by3'>
+									<img src='https://bulma.io/images/placeholders/640x480.png' />
+								</figure>
+								<div class='content'>Content</div>
+							</article>
+							<article class='tile is-child notification is-warning bold'>
+								<p class='title'>...tiles</p>
+								<p class='subtitle'>Bottom tile</p>
+								<figure class='image is-4by3'>
+									<img src='https://bulma.io/images/placeholders/640x480.png' />
+								</figure>
+								<div class='content'>Content</div>
+							</article>
+						</div>
+						<div class='tile is-parent is-vertical'>
+							<article class='tile is-child notification is-info bold'>
+								<p class='title'>Vertical...</p>
+								<p class='subtitle'>Top tile</p>
+								<figure class='image is-4by3'>
+									<img src='https://bulma.io/images/placeholders/640x480.png' />
+								</figure>
+								<div class='content'>Content</div>
+							</article>
+							<article class='tile is-child notification is-danger bold'>
+								<p class='title'>...tiles</p>
+								<p class='subtitle'>Bottom tile</p>
+								<figure class='image is-4by3'>
+									<img src='https://bulma.io/images/placeholders/640x480.png' />
+								</figure>
+								<div class='content'>Content</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
 			{crafts.map(craft => (
 				<div key={craft.id}>
 					<p>
