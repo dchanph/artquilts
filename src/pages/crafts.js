@@ -17,9 +17,36 @@ const CraftsPage = () => {
 	}, []);
 	return (
 		<Layout>
+			<div class='card-content'>
+				<div class='media'>
+					<div class='media-left'>
+						<figure class='image is-48x48'>
+							<img
+								class='is-rounded'
+								src='http://www.radfaces.com/images/avatars/linda-barret.jpg'
+								alt='linda barret avatar'
+							></img>
+						</figure>
+					</div>
+					<div class='media-content'>
+						<p class='title is-4'>Gen Lim</p>
+						<p class='subtitle is-6'>Gen@quilts.com</p>
+					</div>
+				</div>
+				<div class='content'>
+					<p>
+						Greatly appreciate your interest in my quilted art pieces. It is
+						always a pleasure to search out pre-loved fabrics and then create
+						delightful artworks out of them. Have fun!
+					</p>
+					<a>@bulmaio</a>.<a href='#'>#css</a>
+					<a href='#'>#responsive</a>
+					<br />
+				</div>
+			</div>
 			{crafts.map(craft => (
 				<div class='tile is-ancestor'>
-					<div class='tile is-vertical is-8'>
+					<div class='tile is-vertical is-6'>
 						<div class='tile'>
 							<div class='tile is-parent'>
 								<article class='tile is-child notification is-info'>
@@ -54,6 +81,7 @@ const CraftsPage = () => {
 					</div>
 				</div>
 			))}
+			;
 			<br />
 		</Layout>
 	);

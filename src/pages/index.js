@@ -7,13 +7,10 @@ import '../styles/mystyle.scss';
 const IndexPage = () => {
 	return (
 		<Layout>
-			<section class='hero is-primary'>
-				<div class='hero-body'>
-					<div class='container'>
-						<h1 class='title'>Primary title</h1>
-						<h2 class='subtitle'>Primary subtitle</h2>
-					</div>
-				</div>
+			<section class='hero'>
+				<figure class='image'>
+					<img src='/navquilt.jpg'></img>
+				</figure>
 			</section>
 			<br />
 			<br />
@@ -25,7 +22,8 @@ const IndexPage = () => {
 							<figure class='image is-128x128'>
 								<img
 									class='is-rounded'
-									src='https://bulma.io/images/placeholders/128x128.png'
+									src='http://www.radfaces.com/images/avatars/linda-barret.jpg'
+									alt='linda barret avatar'
 								></img>
 							</figure>
 							<br />
