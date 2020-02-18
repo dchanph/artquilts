@@ -44,11 +44,12 @@ const CraftsPage = () => {
 					<br />
 				</div>
 			</div>
+
 			{crafts.map(craft => (
 				<div class='tile is-ancestor'>
-					<div class='tile is-vertical is-6'>
+					<div class='tile is-6 is-parent'>
 						<div class='tile'>
-							<div class='tile is-parent'>
+							<div class='tile'>
 								<article class='tile is-child notification is-info'>
 									<div key={craft.id}>
 										<p class='title'>Craft Info</p>
@@ -81,7 +82,7 @@ const CraftsPage = () => {
 					</div>
 				</div>
 			))}
-			;
+
 			<br />
 		</Layout>
 	);
