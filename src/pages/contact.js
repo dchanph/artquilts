@@ -9,39 +9,25 @@ const ContactPage = () => {
 					<div class='container has-text-centred'>
 						<div class='columns is-12 is-variable '>
 							<div class='column is-half has-text-left'>
-								<h1 class='title is-1'>Contact Us</h1>
-								<p class='is-size-4'>Get in touch:) </p>
+								<h1 class='title is-1'>Keep in touch:)</h1>
+								<p class='is-size-5'></p>
 								<br />
-								<p class='is-size-4'>By phone: 65 - 6123 4567</p>
+								<p class='is-size-5'>By phone: 65 - 6123 4567</p>
 								<br />
-								<p class='is-size-4'>By email: art@quilts.com</p>
+								<p class='is-size-5'>By email: art@quilts.com</p>
 								<br />
 								<div class='social-media'>
-									<script
-										defer
-										src='https://use.fontawesome.com/releases/v5.3.1/js/all.js'
-									></script>
-									<a
-										href='https://facebook.com'
-										target='_blank'
-										class='button is-medium is-large'
-									>
-										<i class='fa fa-facebook-square' aria-hidden='true'></i>
-									</a>
-									<a
-										href='https://instagram.com'
-										target='_blank'
-										class='button is-medium is-large'
-									>
-										<i class='fa fa-instagram' aria-hidden='true'></i>
-									</a>
-									<a
-										href='https://twitter.com'
-										target='_blank'
-										class='button is-medium is-large'
-									>
-										<i class='fa fa-twitter' aria-hidden='true'></i>
-									</a>
+									<p class='card-footer-item'>
+										View on{' '}
+										<a href='https://twitter.com/codinghorror/status/506010907021828096'>
+											Twitter
+										</a>
+										<p class='card-footer-item'>
+											<span>
+												Share on <a href='#'>Facebook</a>
+											</span>
+										</p>
+									</p>
 								</div>
 							</div>
 							<div class='column is-one-third has-text-left'>
