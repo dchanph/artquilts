@@ -62,10 +62,10 @@ const CraftDetails = ({ location }) => {
 				</div>
 			</div>
 			<div className='buttons'>
-				<button className='button is-success is-light $title-strong-weight'>
+				<button className='is-Link is-fullwidth has-text-weight-strong is-strong'>
 					<Link to='/contact'>Purchase Craft</Link>
 				</button>
-				<button className='button is-link is-light $title-strong-weight'>
+				<button className='is-Link is-fullwidth has-text-weight-strong is-strong'>
 					<Link to='/donate'>Donate a Kit</Link>
 				</button>
 			</div>

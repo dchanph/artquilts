@@ -55,7 +55,7 @@ const DonatePage = () => {
 														to={'/contact/'}
 														state={{ donatekitId: donatekit.id }}
 													>
-														Payment
+														Donate
 													</Link>
 												</div>
 											</div>
