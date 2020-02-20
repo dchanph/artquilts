@@ -20,7 +20,7 @@ const CraftsPage = () => {
 			<div class='card-content'>
 				<div class='media'>
 					<div class='media-left'>
-						<figure class='image is-48x48'>
+						<figure class='image is-96x96'>
 							<img
 								class='is-rounded'
 								src='http://www.radfaces.com/images/avatars/linda-barret.jpg'
@@ -34,6 +34,7 @@ const CraftsPage = () => {
 					</div>
 				</div>
 				<div class='content'>
+					<p class='subtitle is-5'></p>
 					<p>
 						Greatly appreciate your interest in my quilted art pieces. It is
 						always a pleasure to search out pre-loved fabrics and then create
@@ -44,46 +45,48 @@ const CraftsPage = () => {
 					<br />
 				</div>
 			</div>
-
-			{crafts.map(craft => (
-				<div class='tile is-ancestor'>
-					<div class='tile is-6 is-parent'>
-						<div class='tile'>
+			<div className='columns is-multiline'>
+				{crafts.map(craft => (
+					<div class='tile column is-6 is-ancestor'>
+						<div class='tile is-parent'>
 							<div class='tile'>
-								<article class='tile is-child notification is-info'>
-									<div key={craft.id}>
-										<p class='title'>Craft Info</p>
-										<img
-											width='450'
-											src={'http://localhost:3000' + craft.pdtImg}
-											alt={craft.pdtName}
-										></img>
-									</div>
-									<div class='card-content'>
-										<div class='media'>
-											<div class='media-content'>
-												<p class='title is-4'>{craft.pdtName}</p>
-												<p class='subtitle is-6'>
-													Category: {craft.pdtCategory}
-												</p>
-												<p class='subtitle is-6'>Price SGD: {craft.pdtPrice}</p>
-												<Link
-													to={'/craftDetails/'}
-													state={{ craftId: craft.id }}
-												>
-													More info
-												</Link>
+								<div class='tile'>
+									<article class='tile is-child notification is-info'>
+										<div key={craft.id}>
+											<p class='title'>Craft Info</p>
+											<img
+												width='450'
+												height='450'
+												src={'http://localhost:3000' + craft.pdtImg}
+												alt={craft.pdtName}
+											></img>
+										</div>
+										<div class='card-content'>
+											<div class='media'>
+												<div class='media-content'>
+													<p class='title is-4'>{craft.pdtName}</p>
+													<p class='subtitle is-6'>
+														Category: {craft.pdtCategory}
+													</p>
+													<p class='subtitle is-6'>
+														Price SGD: {craft.pdtPrice}
+													</p>
+													<Link
+														to={'/craftDetails/'}
+														state={{ craftId: craft.id }}
+													>
+														More info
+													</Link>
+												</div>
 											</div>
 										</div>
-									</div>
-								</article>
+									</article>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			))}
-
-			<br />
+				))}
+			</div>
 		</Layout>
 	);
 };

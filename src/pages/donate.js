@@ -4,14 +4,15 @@ import Layout from '../components/layout';
 //import Images from '../posts/images';
 
 const DonatePage = () => {
-	const [crafts, setCrafts] = useState([]);
+	const [donatekits, setDonatekits] = useState([]);
+
 	useEffect(() => {
 		// get data from GitHub api
-		fetch('http://localhost:3000/crafts.json')
+		fetch('http://localhost:3000/donatekits.json')
 			.then(response => response.json()) // parse JSON from request
 			.then(resultData => {
 				console.log('result data', resultData);
-				setCrafts(resultData);
+				setDonatekits(resultData);
 			}); // set data for the number of crafts
 	}, []);
 	return (
@@ -21,48 +22,53 @@ const DonatePage = () => {
 					<img src='/sewingkit.jpg'></img>
 				</figure>
 			</section>
-			<br />
-			{crafts.map(craft => (
-				<div class='tile is-ancestor'>
-					<div class='tile is-vertical is-6'>
-						<div class='tile'>
-							<div class='tile is-parent'>
-								<article class='tile is-child notification is-info'>
-									<div key={craft.id}>
-										<p class='title'>Donate a kit</p>
-										<img
-											width='450'
-											src={'http://localhost:3000' + craft.pdtImg}
-											alt={craft.pdtName}
-										></img>
-									</div>
-									<div class='card-content'>
-										<div class='media'>
-											<div class='media-content'>
-												<p class='title is-4'>{craft.pdtName}</p>
-												<p class='subtitle is-6'>
-													Category: {craft.pdtCategory}
-												</p>
-												<p class='subtitle is-6'>Price SGD: {craft.pdtPrice}</p>
-												<Link
-													to={'/craftDetails/'}
-													state={{ craftId: craft.id }}
-												>
-													More info
-												</Link>
+			<div className='columns is-multiline'>
+				{donatekits.map(donatekit => (
+					<div class='tile column is-6 is-ancestor'>
+						<div class='tile is-parent'>
+							<div class='tile'>
+								<div class='tile'>
+									<article class='tile is-child notification is-warning'>
+										<div key={donatekit.id}>
+											<p class='title'>Donate a Kit</p>
+											<img
+												width='450'
+												height='450'
+												src={'http://localhost:3000' + donatekit.kitImg}
+												alt={donatekit.kitName}
+											></img>
+										</div>
+										<div class='card-content'>
+											<div class='media'>
+												<div class='media-content'>
+													<p class='title is-4'>{donatekit.kitName}</p>
+													<p class='subtitle is-6'>
+														Category: {donatekit.kitCategory}
+													</p>
+													<p class='subtitle is-6'>
+														Price SGD: {donatekit.kitCost}
+													</p>
+													<p class='subtitle is-6'>
+														Materials: {donatekit.kitDetails}
+													</p>
+													<Link
+														to={'/contact/'}
+														state={{ donatekitId: donatekit.id }}
+													>
+														Payment
+													</Link>
+												</div>
 											</div>
 										</div>
-									</div>
-								</article>
+									</article>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			))}
-			;
+				))}
+			</div>
 			<br />
 		</Layout>
 	);
 };
-
 export default DonatePage;

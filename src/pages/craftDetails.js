@@ -19,29 +19,40 @@ const CraftDetails = ({ location }) => {
 
 	// const mapCraftsToItem = craft =>
 	// craft.map(({node: {id, pdtImg, pdtName, pdtCategory,pdtPrice}}))
+
+	console.log(craft);
+
 	return (
 		<Layout>
-			<div class='tile is-ancestor'>
-				<div class='tile is-vertical is-8'>
-					<div class='tile'>
-						<div class='tile is-parent'>
-							<article class='tile is-child notification is-info'>
+			<div className='tile is-ancestor'>
+				<div className='tile is-vertical is-8'>
+					<div className='tile'>
+						<div className='tile is-parent'>
+							<article className='tile is-child notification is-info'>
 								<div key={craft.id}>
-									<p class='title'>Craft Info</p>
+									<p className='title'>Craft Info</p>
 									<img
-										width='450'
+										width='400'
 										src={'http://localhost:3000' + craft.pdtImg}
 										alt={craft.pdtName}
 									></img>
 								</div>
-								<div class='card-content'>
-									<div class='media'>
-										<div class='media-content'>
-											<p class='title is-4'>{craft.pdtName}</p>
-											<p class='subtitle is-6'>Category: {craft.pdtCategory}</p>
-											<p class='subtitle is-6'>Price SGD: {craft.pdtPrice}</p>
-											<p>Product description:</p>
-											<p>Quilted duck in pastel fabrics.</p>
+								<div className='card-content'>
+									<div className='media'>
+										<div className='media-content'>
+											<p className='title is-4'>{craft.pdtName}</p>
+											<p className='subtitle is-6'>
+												Category: {craft.pdtCategory}
+											</p>
+											<p className='subtitle is-6'>
+												Price SGD: {craft.pdtPrice}
+											</p>
+											<p className='subtitle is-6'>
+												Kit:
+												{craft.donatekits
+													? craft.donatekits[0].kitDetails
+													: 'No Kits Available'}
+											</p>
 										</div>
 									</div>
 								</div>
@@ -50,11 +61,11 @@ const CraftDetails = ({ location }) => {
 					</div>
 				</div>
 			</div>
-			<div class='buttons'>
-				<button class='button is-success is-light $title-strong-weight'>
+			<div className='buttons'>
+				<button className='button is-success is-light $title-strong-weight'>
 					<Link to='/contact'>Purchase Craft</Link>
 				</button>
-				<button class='button is-link is-light $title-strong-weight'>
+				<button className='button is-link is-light $title-strong-weight'>
 					<Link to='/donate'>Donate a Kit</Link>
 				</button>
 			</div>
