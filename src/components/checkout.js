@@ -39,7 +39,7 @@ const Checkout = class extends React.Component {
 				style={buttonStyles}
 				onClick={event => this.redirectToCheckout(event)}
 			>
-				BUY MY BOOK
+				BUY OR DONATE
 			</button>
 		);
 	}

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
-//import Images from '../posts/images';
 
 const CraftsPage = () => {
 	const [crafts, setCrafts] = useState([]);

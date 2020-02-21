@@ -3,6 +3,8 @@ import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import '../styles/index.scss';
 import '../styles/mystyle.scss';
+// import View from '../components/View';
+// import Status from '../components/Status';
 
 const IndexPage = () => {
 	return (
@@ -45,24 +47,21 @@ const IndexPage = () => {
 					<div class='tile is-child box'>
 						<p class='title'>Art Quilt: the social enterprise </p>
 						<p>
-							Art Quilt seeks to build a self-funding community through
-							businesses by women. It provides a safe environment to quilt,
-							share knowledge and socialize.
+							Art Quilt seeks to support women working in cottage industries. It
+							micro-finances their businesses. It also provides them a work
+							opportunity. in a safe environment to quilt, share knowledge and
+							socialize.
+							<Link to='/crafts'>Support us by buying a craft.</Link>
 						</p>
 						<br />
 						<p>
-							All patchworks used are pre-loved fabric materials. The fund
-							earned pays for the work by the quilter and micro-finance their
-							businesses. It also funds educational initiatives within the
-							community.
+							Art Quilts creates a sustainability eco-system by buying pre-loved
+							fabric materials. The revenue earned funds educational initiatives
+							within the community.
+							<Link to='/donate'>Support us by donating a kit.</Link>
 						</p>
 						<br />
-						<p>
-							We stitch your wish while improving our community.
-							<Link to='/contact'>
-								Support us by buying a craft or donating a kit.
-							</Link>
-						</p>
+						<p>Every stitch creates an opportunity to enhance our community.</p>
 						<br />
 						<p>
 							Have a moment? Watch the video on a similar quest by Mekong+ on
@@ -101,6 +100,24 @@ const IndexPage = () => {
 				></iframe>
 			</figure>
 			<br />
+			{/* <Status />
+			<View title='Simple Authentication Example'>
+				<p>
+					This is a simple example of creating dynamic apps with Gatsby that
+					require user authentication. It uses concepts from the
+					{` `}
+					<a href='https://www.gatsbyjs.org/docs/client-only-routes-and-user-authentication/'>
+						client-only routes section
+					</a>
+					{` `}
+					of the “Building Apps with Gatsby” documentation.
+				</p>
+				<p>
+					For the full experience, go to
+					{` `}
+					<Link to='/app/profile'>your profile</Link>.
+				</p>
+			</View> */}
 		</Layout>
 	);
 };

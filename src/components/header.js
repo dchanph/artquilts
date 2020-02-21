@@ -16,6 +16,15 @@ const Header = () => {
 
 	return (
 		<header className={headerStyles.header}>
+			<div
+				style={{
+					display: 'flex',
+					flex: '1',
+					justifyContent: 'space-between',
+					borderBottom: '1px solid #d1c1e0'
+				}}
+			></div>
+			<span>You are not logged in</span>
 			<h1>
 				<Link className={headerStyles.title} to='/'>
 					{data.site.siteMetadata.title}
@@ -63,9 +72,9 @@ const Header = () => {
 						<Link
 							className={headerStyles.navItem}
 							activeClassName={headerStyles.activeNavItem}
-							to='/myaccount'
+							to='/app/profile'
 						>
-							My Account
+							Login
 						</Link>
 					</li>
 				</ul>
