@@ -24,7 +24,6 @@ const Header = () => {
 					borderBottom: '1px solid #d1c1e0'
 				}}
 			></div>
-			<span>You are not logged in</span>
 			<h1>
 				<Link className={headerStyles.title} to='/'>
 					{data.site.siteMetadata.title}
@@ -69,13 +68,13 @@ const Header = () => {
 						</Link>
 					</li>
 					<li>
-						<Link
+						{/* <Link
 							className={headerStyles.navItem}
 							activeClassName={headerStyles.activeNavItem}
 							to='/app/profile'
 						>
 							Login
-						</Link>
+						</Link> */}
 					</li>
 				</ul>
 			</nav>

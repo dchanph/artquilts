@@ -1,41 +1,84 @@
-const isBrowser = typeof window !== `undefined`;
+import auth0 from 'auth0-js';
 
-const getUser = () =>
-	window.localStorage.gatsbyUser
-		? JSON.parse(window.localStorage.gatsbyUser)
-		: {};
+export const isBrowser = typeof window !== 'undefined';
 
-const setUser = user => (window.localStorage.gatsbyUser = JSON.stringify(user));
+const tokens = {
+	idToken: false,
+	accessToken: false
+};
 
-export const handleLogin = ({ username, password }) => {
-	if (!isBrowser) return false;
+let user = {};
 
-	if (username === `gatsby` && password === `demo`) {
-		console.log(`Credentials match! Setting the active user.`);
-		return setUser({
-			name: `Jim`,
-			legalName: `James K. User`,
-			email: `jim@example.org`
-		});
+export const isAuthenticated = () => {
+	return tokens.idToken !== false;
+};
+
+const auth = isBrowser
+	? new auth0.WebAuth({
+			domain: process.env.AUTH0_DOMAIN,
+			clientID: process.env.AUTH0_CLIENTID,
+			redirectUri: process.env.AUTH0_CALLBACK,
+			responseType: 'token id_token',
+			scope: 'openid profile email'
+	  })
+	: {};
+
+export const login = () => {
+	if (!isBrowser) {
+		return;
 	}
 
-	return false;
+	auth.authorize();
 };
 
-export const isLoggedIn = () => {
-	if (!isBrowser) return false;
+export const logout = () => {
+	tokens.accessToken = false;
+	tokens.idToken = false;
+	user = {};
+	window.localStorage.setItem('isLoggedIn', false);
 
-	const user = getUser();
-
-	return !!user.email;
+	auth.logout({
+		returnTo: window.location.origin
+	});
 };
 
-export const getCurrentUser = () => isBrowser && getUser();
+const setSession = (cb = () => {}) => (err, authResult) => {
+	if (err) {
+		if (err.error === 'login_required') {
+			login();
+		}
+	}
+	if (authResult && authResult.accessToken && authResult.idToken) {
+		tokens.idToken = authResult.idToken;
+		tokens.accessToken = authResult.accessToken;
 
-export const logout = callback => {
-	if (!isBrowser) return;
+		auth.client.userInfo(tokens.accessToken, (_err, userProfile) => {
+			user = userProfile;
+			window.localStorage.setItem('isLoggedIn', true);
 
-	console.log(`Ensuring the \`gatsbyUser\` property exists.`);
-	setUser({});
-	callback();
+			cb();
+		});
+	}
+};
+
+export const checkSession = callback => {
+	const isLoggedIn = window.localStorage.getItem('isLoggedIn');
+	if (isLoggedIn === 'false' || isLoggedIn === null) {
+		callback();
+	}
+	const protectedRoutes = [`/account`, `/callback`];
+	const isProtectedRoute = protectedRoutes
+		.map(route => window.location.pathname.includes(route))
+		.some(route => route);
+	if (isProtectedRoute) {
+		auth.checkSession({}, setSession(callback));
+	}
+};
+
+export const handleAuthentication = () => {
+	auth.parseHash(setSession());
+};
+
+export const getProfile = () => {
+	return user;
 };

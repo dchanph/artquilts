@@ -100,6 +100,8 @@ const IndexPage = () => {
 				></iframe>
 			</figure>
 			<br />
+			<Link to='/account/'>Go to your account</Link>
+			{/* <Link to='/account/'>Go to your account</Link> */}
 			{/* <Status />
 			<View title='Simple Authentication Example'>
 				<p>

@@ -52,7 +52,7 @@ const DonatePage = () => {
 														Materials: {donatekit.kitDetails}
 													</p>
 													<Link
-														to={'/app/profile'}
+														to={'/contact'}
 														state={{ donatekitId: donatekit.id }}
 													>
 														Donate

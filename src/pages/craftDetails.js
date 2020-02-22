@@ -52,7 +52,7 @@ const CraftDetails = ({ location }) => {
 			</div>
 			<div class='buttons'>
 				<button class='button is-success is-light $title-strong-weight'>
-					<Link to='/app/profile'>Purchase a craft</Link>
+					<Link to='/contact'>Purchase a craft</Link>
 				</button>
 				<button class='button is-link is-light $title-strong-weight'>
 					<Link to='/donate'>Donate a kit</Link>
