@@ -41,7 +41,9 @@ const CraftDetails = ({ location }) => {
 											<p class='subtitle is-6'>Category: {craft.pdtCategory}</p>
 											<p class='subtitle is-6'>Price SGD: {craft.pdtPrice}</p>
 											<p>Product description:</p>
-											<p>Quilted duck in pastel fabrics.</p>
+											<p>Quilted with pre-loved fabrics.</p>
+											<p>Layered fiber</p>
+											<p>Lightweight and breathable</p>
 										</div>
 									</div>
 								</div>
@@ -50,13 +52,15 @@ const CraftDetails = ({ location }) => {
 					</div>
 				</div>
 			</div>
-			<div class='buttons'>
-				<button class='button is-success is-light $title-strong-weight'>
-					<Link to='/contact'>Purchase a craft</Link>
-				</button>
-				<button class='button is-link is-light $title-strong-weight'>
-					<Link to='/donate'>Donate a kit</Link>
-				</button>
+			<div class='field is-grouped'>
+				<Link class='buttons'>
+					<button class='button is-link is-rounded is-light $title-strong-weight'>
+						<Link to='/account/billing'>Buy me</Link>
+					</button>
+					<button class='button is-danger is-rounded is-light $title-strong-weight'>
+						<Link to='/donate'>Donate a kit</Link>
+					</button>
+				</Link>
 			</div>
 			<br />
 		</Layout>

@@ -9,7 +9,6 @@ exports.components = {
   "component---src-pages-craft-details-js": () => import("./../src/pages/craftDetails.js" /* webpackChunkName: "component---src-pages-craft-details-js" */),
   "component---src-pages-crafts-js": () => import("./../src/pages/crafts.js" /* webpackChunkName: "component---src-pages-crafts-js" */),
   "component---src-pages-donate-js": () => import("./../src/pages/donate.js" /* webpackChunkName: "component---src-pages-donate-js" */),
-  "component---src-pages-index-js": () => import("./../src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
-  "component---src-pages-myaccount-js": () => import("./../src/pages/myaccount.js" /* webpackChunkName: "component---src-pages-myaccount-js" */)
+  "component---src-pages-index-js": () => import("./../src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */)
 }
 

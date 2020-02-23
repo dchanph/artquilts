@@ -46,13 +46,13 @@ const DonatePage = () => {
 														Category: {donatekit.kitCategory}
 													</p>
 													<p class='subtitle is-6'>
-														Price SGD: {donatekit.kitCost}
+														Kit Cost SGD: {donatekit.kitCost}
 													</p>
 													<p class='subtitle is-6'>
 														Materials: {donatekit.kitDetails}
 													</p>
 													<Link
-														to={'/contact'}
+														to={'/account/billing'}
 														state={{ donatekitId: donatekit.id }}
 													>
 														Donate

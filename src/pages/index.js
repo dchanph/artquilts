@@ -34,10 +34,10 @@ const IndexPage = () => {
 								<p class='subtitle is-6'>@genlim</p>
 							</div>
 							<br />
-							<div class='content'>
+							<div class='content is-5'>
 								<p>
 									I love quilting animal huggies. Each artfully crafted, each
-									with an element of surprize. Bringing cheers to its owner!
+									with an element of surprize!
 								</p>
 							</div>
 						</article>
@@ -47,21 +47,22 @@ const IndexPage = () => {
 					<div class='tile is-child box'>
 						<p class='title'>Art Quilt: the social enterprise </p>
 						<p>
-							Art Quilt seeks to support women working in cottage industries. It
-							micro-finances their businesses. It also provides them a work
-							opportunity. in a safe environment to quilt, share knowledge and
-							socialize.
+							Art Quilt seeks to support women working in cottage industries.
+							Providing them the opportunity to quilt in a safe environment.
+							Also to earn a livelihood or to run a business.
 							<Link to='/crafts'>Support us by buying a craft.</Link>
 						</p>
 						<br />
 						<p>
-							Art Quilts creates a sustainability eco-system by buying pre-loved
-							fabric materials. The revenue earned funds educational initiatives
-							within the community.
+							Art Quilts buys pre-loved fabric materials within the community.
+							This supports its belief that bettering a community starts from
+							the home.
 							<Link to='/donate'>Support us by donating a kit.</Link>
 						</p>
 						<br />
-						<p>Every stitch creates an opportunity to enhance our community.</p>
+						<p>
+							Championing a better tomorrow through circular sustainability.
+						</p>
 						<br />
 						<p>
 							Have a moment? Watch the video on a similar quest by Mekong+ on
@@ -100,7 +101,6 @@ const IndexPage = () => {
 				></iframe>
 			</figure>
 			<br />
-			<Link to='/account/'>Go to your account</Link>
 			{/* <Link to='/account/'>Go to your account</Link> */}
 			{/* <Status />
 			<View title='Simple Authentication Example'>

@@ -7,7 +7,7 @@ const Callback = () => {
 		<>
 			<p>Callback</p>
 			<nav>
-				<Link to='/'>Home</Link> <Link to='/account/'>My Account</Link>{' '}
+				<Link to='/'>Home</Link> <Link to='/contact'>Payment</Link>{' '}
 				<a
 					href='#logout'
 					onClick={e => {

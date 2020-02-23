@@ -9,5 +9,22 @@ module.exports = {
 		title: 'ART Quilt',
 		author: 'Doreen Chan'
 	},
-	plugins: ['gatsby-plugin-sass']
+	plugins: [
+		'gatsby-plugin-sass',
+		{
+			resolve: `gatsby-plugin-prefetch-google-fonts`,
+			options: {
+				fonts: [
+					{
+						family: `Roboto Mono`,
+						variants: [`400`, `700`]
+					},
+					{
+						family: `Roboto`,
+						subsets: [`latin`]
+					}
+				]
+			}
+		}
+	]
 };

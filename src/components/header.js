@@ -16,14 +16,6 @@ const Header = () => {
 
 	return (
 		<header className={headerStyles.header}>
-			<div
-				style={{
-					display: 'flex',
-					flex: '1',
-					justifyContent: 'space-between',
-					borderBottom: '1px solid #d1c1e0'
-				}}
-			></div>
 			<h1>
 				<Link className={headerStyles.title} to='/'>
 					{data.site.siteMetadata.title}
