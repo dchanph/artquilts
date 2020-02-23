@@ -21,6 +21,7 @@
     "gatsby": "^2.19.19",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-sass": "^2.1.28",
+    "gatsby-plugin-stripe": "^1.2.4",
     "gatsby-source-filesystem": "^2.1.48",
     "gatsby-source-stripe": "^3.0.5",
     "react": "^16.12.0",

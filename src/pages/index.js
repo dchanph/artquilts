@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import '../styles/index.scss';
 import '../styles/mystyle.scss';
 // import View from '../components/View';
-// import Status from '../components/Status';
+// import Status from '../components/Status'
 
 const IndexPage = () => {
 	return (
