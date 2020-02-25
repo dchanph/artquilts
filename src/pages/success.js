@@ -1,16 +1,31 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import { logout } from '../utils/auth';
 
-const SecondPage = () => (
+const SuccessPage = () => (
 	<Layout>
-		<SEO title='Page two' />
-		<h1>You bought a thingie!</h1>
-		<p>Thanks for your purchase</p>
-		<Link to='/'>Go back to the homepage</Link>
+		<h1>Funds Receipt Confirmation</h1>
+		<br />
+		<br />
+		<p>
+			Thank you for supporting Arts Quilt. Your gesture is very much
+			appreciated.
+		</p>
+		<br />
+		<br />
+		<a
+			href='#logout'
+			onClick={e => {
+				logout();
+				e.preventDefault();
+			}}
+		>
+			Log Out
+		</a>
+		<br />
+		<br />
 	</Layout>
 );
 
-export default SecondPage;
+export default SuccessPage;
