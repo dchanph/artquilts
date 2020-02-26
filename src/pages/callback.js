@@ -36,7 +36,13 @@ class Button extends React.Component {
 						});
 				}}
 			>
-				<button type='submit'>Buy Me</button>
+				<div class='field is-grouped'></div>
+				<button
+					type='submit'
+					class='button is-link is-halfwidth is-rounded has-text-weight-medium is-medium'
+				>
+					Click to Pay
+				</button>
 				<br />
 				<br />
 			</form>
@@ -47,18 +53,31 @@ class Button extends React.Component {
 const Callback = () => {
 	return (
 		<Layout>
-			<nav>
-				<Button />
-				<a
-					href='#logout'
-					onClick={e => {
-						logout();
-						e.preventDefault();
-					}}
-				>
-					Log Out
-				</a>
-			</nav>
+			<div class='tile is-ancestor'>
+				<div class='tile is-4 is-vertical is-parent'>
+					<div class='tile is-child box'>
+						<Button />
+						<a
+							class='button is-link is-halfwidth is-rounded has-text-weight-medium is-medium'
+							href='#logout'
+							onClick={e => {
+								logout();
+								e.preventDefault();
+							}}
+						>
+							Log Out
+						</a>
+					</div>
+				</div>
+				<div class='tile is-parent'>
+					<div class='tile is-child box'>
+						<figure class='image is 128x128'>
+							<img src='/mites.jpg' alt='Art Quilt'></img>
+						</figure>
+					</div>
+				</div>
+			</div>
+			<br />
 		</Layout>
 	);
 };

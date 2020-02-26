@@ -7,7 +7,7 @@ const CraftsPage = () => {
 
 	useEffect(() => {
 		// get data from GitHub api
-		fetch('http://localhost:3000/crafts.json')
+		fetch('https://frozen-springs-21718.herokuapp.com/crafts.json')
 			.then(response => response.json()) // parse JSON from request
 			.then(resultData => {
 				console.log('result data', resultData);
@@ -39,8 +39,6 @@ const CraftsPage = () => {
 						always a pleasure to search out pre-loved fabrics and then create
 						delightful artworks out of them. Have fun!
 					</p>
-					<a>@bulmaio</a>.<a href='#'>#css</a>
-					<a href='#'>#responsive</a>
 					<br />
 				</div>
 			</div>
@@ -56,7 +54,7 @@ const CraftsPage = () => {
 											<img
 												width='450'
 												height='450'
-												src={'http://localhost:3000' + craft.pdtImg}
+												src={craft.pdtImg}
 												alt={craft.pdtName}
 											></img>
 										</div>
@@ -86,6 +84,7 @@ const CraftsPage = () => {
 					</div>
 				))}
 			</div>
+			<br />
 		</Layout>
 	);
 };

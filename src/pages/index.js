@@ -45,26 +45,25 @@ const IndexPage = () => {
 					<div class='tile is-child box'>
 						<p class='title'>Art Quilt: the social enterprise </p>
 						<p>
-							Art Quilt seeks to support women working in cottage industries.
-							Providing them the opportunity to quilt in a safe environment.
-							Also to earn a livelihood or to run a business.
-							<Link to='/crafts'>Support us by buying a craft.</Link>
+							Art Quilt supports cottage quilting businesses by providing a web
+							platform to showcase and sell quilters' artworks.
+						</p>
+
+						<p>
+							<Link to='/crafts'> Support us by buying a craft.</Link>
 						</p>
 						<br />
 						<p>
-							Art Quilts buys pre-loved fabric materials within the community.
-							This supports its belief that bettering a community starts from
-							the home.
-							<Link to='/donate'>Support us by donating a kit.</Link>
+							All products are made from pre-loved fabric materials supplied by
+							the community. This supports our belief that bettering a community
+							starts from the home.
+							<Link to='/donate'> Support us by donating a kit.</Link>
 						</p>
 						<br />
 						<p>
-							Championing a better tomorrow through circular sustainability.
-						</p>
-						<br />
-						<p>
-							Have a moment? Watch the video on a similar quest by Mekong+ on
-							empowering through quilting. Enjoy!
+							Have a moment? Watch on Mekong+ empowers through quilting. Enjoy!
+							Special thanks to Pexels, Pixabay and Pininterest for the pics
+							used in this website.
 						</p>
 						<br />
 						<p class='subtitle is-6'>Jane Song, founder</p>
@@ -92,8 +91,7 @@ const IndexPage = () => {
 					class='has-ratio'
 					width='640'
 					height='360'
-					src='https://www.youtube.com/embed/YE7VzlLtp-4?showinfo=0'
-					// src='https://www.youtube.com/watch?v=WZewlusNg64'
+					src='https://www.youtube.com/embed/WZewlusNg64'
 					frameborder='0'
 					allowfullscreen
 				></iframe>

@@ -8,7 +8,7 @@ const DonatePage = () => {
 
 	useEffect(() => {
 		// get data from GitHub api
-		fetch('http://localhost:3000/donatekits.json')
+		fetch('https://frozen-springs-21718.herokuapp.com/donatekits.json')
 			.then(response => response.json()) // parse JSON from request
 			.then(resultData => {
 				console.log('result data', resultData);
@@ -34,7 +34,7 @@ const DonatePage = () => {
 											<img
 												width='450'
 												height='450'
-												src={'http://localhost:3000' + donatekit.kitImg}
+												src={donatekit.kitImg}
 												alt={donatekit.kitName}
 											></img>
 										</div>

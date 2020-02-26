@@ -9,7 +9,9 @@ const CraftDetails = ({ location }) => {
 
 	useEffect(() => {
 		// get data from GitHub api
-		fetch('http://localhost:3000/crafts/' + craftId + '.json')
+		fetch(
+			'https://frozen-springs-21718.herokuapp.com/crafts/' + craftId + '.json'
+		)
 			.then(response => response.json()) // parse JSON from request
 			.then(resultData => {
 				console.log('result data', resultData);
@@ -28,11 +30,7 @@ const CraftDetails = ({ location }) => {
 							<article class='tile is-child notification is-info'>
 								<div key={craft.id}>
 									<p class='title'>Craft Info</p>
-									<img
-										width='450'
-										src={'http://localhost:3000' + craft.pdtImg}
-										alt={craft.pdtName}
-									></img>
+									<img width='450' src={craft.pdtImg} alt={craft.pdtName}></img>
 								</div>
 								<div class='card-content'>
 									<div class='media'>
